@@ -1,5 +1,5 @@
 <?php
-
+	namespace Invoicing\Model;
 	class Facture{
 		
 		private $_id;

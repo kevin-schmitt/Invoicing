@@ -1,6 +1,6 @@
 <?php
 	namespace Invoicing\Model;
-	class Person{
+	class Corporation{
 		
 		private $_id;
 		private $_name;
