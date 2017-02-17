@@ -2,12 +2,21 @@
 
 	class Facture{
 		
+		private $_id;
 		private $_date;
 		private $_person;
 		private $_total;
 		
 		public function __construct(){
 			
+		}
+		
+		public function getId(){
+			return $this->_id;
+		}
+		
+		public function setId($id){			
+			$this->_id = $id;
 		}
 		
 		public function getDate(){
