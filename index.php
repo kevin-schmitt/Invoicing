@@ -7,6 +7,8 @@
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.css">
 	</head>
 	<body lang="en">
-		
+		<?php
+			include_once('form/invoicingForm.php');
+		?>
 	</body>
 </html>
