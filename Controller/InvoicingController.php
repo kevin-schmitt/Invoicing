@@ -1,6 +1,7 @@
 <?php
-	use Invoicing\functions as Functions;
-	use Invoicing\Model as Model;
+	require_once '../vendor/autoload.php';
 	
+	$Invoice = new Model\Invoice();
+
 	
 ?>

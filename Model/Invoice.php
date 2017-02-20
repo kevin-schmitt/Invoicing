@@ -1,6 +1,6 @@
 <?php
-	namespace Invoicing\Model;
-	class Facture{
+	namespace Model;
+	class Invoice{
 		
 		private $_id;
 		private $_date;

@@ -1,5 +1,5 @@
 <?php
-	namespace Invoicing\Model;
+	namespace Model;
 	class Person{
 		
 		private $_id;
