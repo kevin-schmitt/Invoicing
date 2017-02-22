@@ -1,3 +1,6 @@
+<?php
+  $corporation = unserialize($_SESSION['corporation']);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,75 +22,75 @@
             margin:0;
             padding:0;
         }
-         
+
         p
         {
             margin:0;
             padding:0;
         }
-         
+
         #wrapper
         {
             width:180mm;
             margin:0 15mm;
         }
-         
+
         .page
         {
             height:297mm;
             width:210mm;
             page-break-after:always;
         }
- 
+
         table
         {
             border-left: 1px solid #ccc;
             border-top: 1px solid #ccc;
-             
+
             border-spacing:0;
-            border-collapse: collapse; 
-             
+            border-collapse: collapse;
+
         }
-         
-        table td 
+
+        table td
         {
             border-right: 1px solid #ccc;
             border-bottom: 1px solid #ccc;
             padding: 2mm;
         }
-         
+
         table.heading
         {
             height:50mm;
         }
-         
+
         h1.heading
         {
             font-size:14pt;
             color:#000;
             font-weight:normal;
         }
-         
+
         h2.heading
         {
             font-size:9pt;
             color:#000;
             font-weight:normal;
         }
-         
+
         hr
         {
             color:#ccc;
             background:#ccc;
         }
-         
+
         #invoice_body
         {
             height: 149mm;
         }
-         
+
         #invoice_body , #invoice_total
-        {   
+        {
             width:100%;
         }
         #invoice_body table , #invoice_total table
@@ -95,13 +98,13 @@
             width:100%;
             border-left: 1px solid #ccc;
             border-top: 1px solid #ccc;
-     
+
             border-spacing:0;
-            border-collapse: collapse; 
-             
+            border-collapse: collapse;
+
             margin-top:5mm;
         }
-         
+
         #invoice_body table td , #invoice_total table td
         {
             text-align:center;
@@ -110,7 +113,7 @@
             border-bottom: 1px solid #ccc;
             padding:2mm 0;
         }
-         
+
         #invoice_body table td.mono  , #invoice_total table td.mono
         {
             font-family:monospace;
@@ -118,9 +121,9 @@
             padding-right:3mm;
             font-size:10pt;
         }
-         
+
         #footer
-        {   
+        {
             width:180mm;
             margin:0 15mm;
             padding-bottom:3mm;
@@ -130,11 +133,11 @@
             width:100%;
             border-left: 1px solid #ccc;
             border-top: 1px solid #ccc;
-             
+
             background:#eee;
-             
+
             border-spacing:0;
-            border-collapse: collapse; 
+            border-collapse: collapse;
         }
         #footer table td
         {
@@ -148,21 +151,14 @@
 </head>
 <body>
 <div id="wrapper">
-     
     <p style="text-align:center; font-weight:bold; padding-top:5mm;">INVOICE</p>
     <br />
     <table class="heading" style="width:100%;">
         <tr>
             <td style="width:80mm;">
-                <h1 class="heading">ABC Corp</h1>
+                <h1 class="heading"><?php echo $corporation->getName();  ?></h1>
                 <h2 class="heading">
-                    123 Happy Street<br />
-                    CoolCity - Pincode<br />
-                    Region , Country<br />
-                     
-                    Website : www.website.com<br />
-                    E-mail : info@website.com<br />
-                    Phone : +1 - 123456789
+                  <?php echo  $corporation->getAdress();  ?>
                 </h2>
             </td>
             <td rowspan="2" valign="top" align="right" style="padding:3mm;">
@@ -183,10 +179,7 @@
             </td>
         </tr>
     </table>
-         
-         
     <div id="content">
-         
         <div id="invoice_body">
             <table>
             <tr style="background:#eee;">
@@ -197,20 +190,20 @@
                 <td style="width:15%;"><b>Total</b></td>
             </tr>
             </table>
-             
+
             <table>
             <tr>
                 <td style="width:8%;">1</td>
                 <td style="text-align:left; padding-left:10px;">Software Development<br />Description : Upgradation of telecrm</td>
                 <td class="mono" style="width:15%;">1</td><td style="width:15%;" class="mono">157.00</td>
                 <td style="width:15%;" class="mono">157.00</td>
-            </tr>         
+            </tr>
             <tr>
                 <td colspan="3"></td>
                 <td></td>
                 <td></td>
             </tr>
-             
+
             <tr>
                 <td colspan="3"></td>
                 <td>Total :</td>
@@ -231,7 +224,6 @@
         <br />
         <hr />
         <br />
-         
         <table style="width:100%; height:35mm;">
             <tr>
                 <td style="width:65%;" valign="top">
@@ -243,7 +235,7 @@
                 </td>
                 <td>
                 <div id="box">
-                    E &amp; O.E.<br />
+                    E  O.E.<br />
                     For ABC Corp<br /><br /><br /><br />
                     Authorised Signatory
                 </div>
@@ -251,20 +243,18 @@
             </tr>
         </table>
     </div>
-     
+
     <br />
-     
+
     </div>
-     
+
     <htmlpagefooter name="footer">
         <hr />
-        <div id="footer"> 
+        <div id="footer">
             <table>
                 <tr><td>Software Solutions</td><td>Mobile Solutions</td><td>Web Solutions</td></tr>
             </table>
         </div>
     </htmlpagefooter>
     <sethtmlpagefooter name="footer" value="on" />
-     
-</body>
-</html>
+</body></html>
