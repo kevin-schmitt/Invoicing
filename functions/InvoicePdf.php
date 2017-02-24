@@ -1,5 +1,6 @@
 <?php
   $corporation = unserialize($_SESSION['corporation']);
+  $buyer = unserialize($_SESSION['buyer']);
 ?>
 <!DOCTYPE html>
 <html>
@@ -172,8 +173,8 @@
         <tr>
             <td>
                 <b>Buyer</b> :<br />
-                Client Name<br />
-            Client Address
+                <?php echo  $buyer->getAdress();  ?><br />
+                <?php echo  $buyer->getName();  ?>
                 <br />
                 City - Pincode , Country<br />
             </td>

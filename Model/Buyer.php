@@ -1,6 +1,6 @@
 <?php
 	namespace Model;
-	class Person{
+	class Buyer{
 		
 		private $_id;
 		private $_name;
