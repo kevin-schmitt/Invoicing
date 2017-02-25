@@ -8,6 +8,19 @@
 		    $data = htmlspecialchars($data);
 		    return $data;
 		}
+		
+		public function validateDate($date)
+		{
+			$d = DateTime::createFromFormat('Y-m-d', $date);
+			if($d && $d->format('Y-m-d') === $date){
+				return $date;
+			}
+			else
+			{
+				return date("d/m/Y") ;
+			}
+			
+		}
 
 	}
 

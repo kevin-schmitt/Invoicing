@@ -2,21 +2,21 @@
 	namespace Model;
 	class Invoice{
 		
-		private $_id;
+		private $_number;
 		private $_date;
-		private $_person;
+		private $_builder;
 		private $_total;
 		
 		public function __construct(){
 			
 		}
 		
-		public function getId(){
-			return $this->_id;
+		public function getNumber(){
+			return $this->_number;
 		}
 		
-		public function setId($id){			
-			$this->_id = $id;
+		public function setNumber($number){			
+			$this->_number = $number;
 		}
 		
 		public function getDate(){
@@ -27,11 +27,11 @@
 			$this->_date = $newDate;
 		}
 		
-		public function getPerson(){
+		public function getBuilder(){
 			return $this->_person;
 		}
 		
-		public function setPerson(Person $person){			
+		public function setBuilder(Person $person){			
 			$this->_person = $person;
 		}
 		

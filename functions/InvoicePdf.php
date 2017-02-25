@@ -1,6 +1,7 @@
 <?php
   $corporation = unserialize($_SESSION['corporation']);
   $buyer = unserialize($_SESSION['buyer']);
+  $invoice = unserialize($_SESSION['invoice']);
 ?>
 <!DOCTYPE html>
 <html>
@@ -164,7 +165,7 @@
             </td>
             <td rowspan="2" valign="top" align="right" style="padding:3mm;">
                 <table>
-                    <tr><td>Invoice No : </td><td>11-12-17</td></tr>
+                    <tr><td>Invoice No : </td><td><?php echo $invoice->getNumber(); ?></td></tr>
                     <tr><td>Dated : </td><td>01-Aug-2011</td></tr>
                     <tr><td>Currency : </td><td>USD</td></tr>
                 </table>
