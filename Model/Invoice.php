@@ -2,11 +2,12 @@
 	namespace Model;
 	class Invoice{
 
-		private $_number = 0;
-		private $_date = date("d-m-Y);
-		private $_buyer = "";
+		private $_number = null;
+		private $_date = null;
+		private $_buyer = null;
 		private $_contentInvoice = array();
-		private $_total = 0;
+		private $_corporation = null;
+		private $_total = null;
 
 		public function __construct(){
 
@@ -35,11 +36,16 @@
 		}
 
 		public function setBuyer(Buyer $buyer){
-			if($buyer instanceof 'Buyer'){
-                $this->_buyer = $buyer;
-			}
+      $this->_buyer = $buyer;
 		}
 
+		public function getCorporation(){
+			return $this->_corporation;
+		}
+
+		public function setCorporation(Corporation $corporation){
+			$this->_corporation = $corporation;
+		}
 		public function getTotal(){
 			return $this->_total;
 		}

@@ -1,6 +1,4 @@
 <?php
-  $corporation = unserialize($_SESSION['corporation']);
-  $buyer = unserialize($_SESSION['buyer']);
   $invoice = unserialize($_SESSION['invoice']);
 ?>
 <!DOCTYPE html>

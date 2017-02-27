@@ -24,11 +24,11 @@
 		$buyer->setAdress($buyerAdress);
 
 		$invoice->setNumber($nbInvoice);
-
+		$invoice->setCorporation($corporation);
+		$invoice->setBuyer($buyer);
+var_dump($invoice); exit;
 
 		session_start();
-		$_SESSION['corporation'] = serialize($corporation);
-		$_SESSION['buyer'] = serialize($buyer);
 		$_SESSION['invoice'] = serialize($invoice);
 
 		ob_start();

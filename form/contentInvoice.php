@@ -4,5 +4,5 @@
 	<input type="text" placeholder="Product" name="product" id="product">
 	<input type="text" placeholder="quantity" name="quantity" id="quantity">
 	<input type="text" placeholder="Rate" name="rate" id="rate">
-	<input type="submit" name="generateContentInvoice" value="Generate row">
+	<input type="submit" name="generateContentInvoice" value="Add row in invoice">
 </form>

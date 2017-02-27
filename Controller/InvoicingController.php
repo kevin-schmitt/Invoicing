@@ -19,21 +19,21 @@
 
 		$corporation->setName($corporationName);
 		$corporation->setAdress($corporationAdress);
-		
+
 		$buyer->setName($buyerName);
 		$buyer->setAdress($buyerAdress);
-		
-		$invoice->setNumber($nbInvoice);
 
-		
+		$invoice->setNumber($nbInvoice);
+		$invoice->setCorporation($corporation);
+		$invoice->setBuyer($buyer);
+
+
 		session_start();
-		$_SESSION['corporation'] = serialize($corporation);
-		$_SESSION['buyer'] = serialize($buyer);
 		$_SESSION['invoice'] = serialize($invoice);
-	
-		ob_start();  
+
+		ob_start();
 	    include('../functions/InvoicePdf.php');
-	    $content = ob_get_clean(); 
+	    $content = ob_get_clean();
 
 		$mpdf=new mPDF('c','A4','','' , 0 , 0 , 0 , 0 , 0 , 0);
 
@@ -46,8 +46,3 @@
 		$mpdf->Output();
 
 	}
-
-
-
-
-?>
