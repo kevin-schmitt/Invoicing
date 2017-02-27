@@ -10,10 +10,17 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body lang="en">
-		<section class="w3-display-middle">
-			<?php
-				include_once('form/invoicingForm.php');
-			?>
+		<section class="w3-container w3-row">
+			<article class="w3-col m4 l4">
+				<?php
+					include_once('form/invoicingForm.php');
+				?>
+			</article>
+			<article class="w3-margin-left w3-col m4 l4">
+				<?php
+					include_once('form/contentInvoice.php');
+				?>
+			</article>
 		</section>
 	</body>
 </html>
