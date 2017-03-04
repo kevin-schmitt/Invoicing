@@ -7,46 +7,46 @@ class SPDO
    *
    * @var PDO
    * @access private
-   */ 
+   */
   private $PDOInstance = null;
- 
+
    /**
    * Instance of PDO class
    *
    * @var SPDO
    * @access private
    * @static
-   */ 
+   */
   private static $instance = null;
- 
+
   /**
-   * Constant: user name for connexion 
+   * Constant: user name for connexion
    *
    * @var string
    */
   const DEFAULT_SQL_USER = 'root';
- 
+
   /**
    * Constant: hôte of database
    *
    * @var string
    */
   const DEFAULT_SQL_HOST = 'localhost';
- 
+
   /**
    * Constant: pass of database
    *
    * @var string
    */
   const DEFAULT_SQL_PASS = '';
- 
+
   /**
    * Constant: database name
    *
    * @var string
    */
   const DEFAULT_SQL_DTB = 'invoicing';
- 
+
   /**
    * Constructor
    *
@@ -57,9 +57,9 @@ class SPDO
    */
   private function __construct()
   {
-    $this->PDOInstance = new PDO('mysql:dbname='.self::DEFAULT_SQL_DTB.';host='.self::DEFAULT_SQL_HOST,self::DEFAULT_SQL_USER ,self::DEFAULT_SQL_PASS);    
+    $this->PDOInstance = new PDO('mysql:dbname='.self::DEFAULT_SQL_DTB.';host='.self::DEFAULT_SQL_HOST,self::DEFAULT_SQL_USER ,self::DEFAULT_SQL_PASS);
   }
- 
+
    /**
     * Make and return instance of object
     *
@@ -69,14 +69,14 @@ class SPDO
     * @return SPDO $instance
     */
   public static function getInstance()
-  {  
+  {
     if(is_null(self::$instance))
     {
       self::$instance = new SPDO();
     }
     return self::$instance;
   }
- 
+
   /**
    * Execute sql request
    *
