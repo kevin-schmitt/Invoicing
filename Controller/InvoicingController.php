@@ -27,12 +27,15 @@
 		$invoice->setCorporation($corporation);
 		$invoice->setBuyer($buyer);
 
-
 		session_start();
 		$_SESSION['invoice'] = serialize($invoice);
+		header('Location: InvoicingContentController.php');
+		exit;
+
+		/*
 
 		ob_start();
-	    include('../functions/InvoicePdf.php');
+	    include('../view/InvoicePdf.php');
 	    $content = ob_get_clean();
 
 		$mpdf=new mPDF('c','A4','','' , 0 , 0 , 0 , 0 , 0 , 0);
@@ -43,6 +46,6 @@
 
 		$mpdf->WriteHTML($content);
 
-		$mpdf->Output();
+		$mpdf->Output();*/
 
 	}
