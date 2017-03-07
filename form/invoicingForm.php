@@ -1,5 +1,5 @@
 <form class="form " action="Controller/invoicingController.php" method="POST">
-	<label class="well w3-blue"> Invoicing </label>
+	<label class="well"> Invoicing </label>
 	<input type="text" placeholder="corporation name" name="coporationName" id="coporationName">
 	<input type="text" placeholder="corporation adress" name="corporationAdress" id="corporationAdress">
 	<input type="text" placeholder="buyer Name" name="buyerName" id="BuyerName">

@@ -3,12 +3,10 @@
 	position: relative;
 	z-index: 1;
 	background: #FFFFFF;
-	max-width:360px;
-	margin: auto 0 150px;
 	padding: 45px;
 	text-align: center;
 	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-	
+
 }
 
 .form input
@@ -24,10 +22,16 @@
 
 .section
 {
-	margin-top: 100px;
+	width: 100%;
 }
 label
 {
-	width: 100%;
-	
+	width: 20%;
+	color:white;
+	font-family: "Arial Black", Arial, Verdana, sans-serif;
+
+
+}
+.well {
+    background: #00BFFF;
 }
