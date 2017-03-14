@@ -26,7 +26,8 @@
 }
 label
 {
-	width: 20%;
+	width: 40%;
+	font-size: 2em;
 	color:white;
 	font-family: "Arial Black", Arial, Verdana, sans-serif;
 
@@ -34,4 +35,10 @@ label
 }
 .well {
     background: #00BFFF;
+}
+
+.pdf
+{
+	margin-bottom: 1%;
+	height: 80px;
 }

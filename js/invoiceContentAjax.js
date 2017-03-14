@@ -21,7 +21,7 @@ $(document).ready(function() {
                 type: $this.attr('method'), // post
                 data: $this.serialize(), //I send data object
                 success: function(html) {
-                    alert(html); // J'affiche cette réponse
+                  $('#contentInvoice').append('<div class="alert alert-success alert-dismissable"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Invoice content added added</div>');
                 }
             });
         }

@@ -14,6 +14,19 @@
 				 	session_start();
 					$invoice = unserialize($_SESSION['invoice']);
 
+					// add data
+					$invoiceContent = new Model\InvoiceContent();
+					$invoiceContent->setNumber($nbSI);
+					$invoiceContent->setProduct($product);
+					$invoiceContent->setQuantity($quantity);
+					$invoiceContent->setRate($rate);
+
+
+					$invoice->addContentInvoice($invoiceContent);
+
+					$_SESSION['invoice'] = serialize($invoice);
+
+
 			 }
 			 else {
 					die("Problem with quantity of invoice");
