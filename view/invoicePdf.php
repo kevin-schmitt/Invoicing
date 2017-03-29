@@ -1,4 +1,5 @@
 <?php
+  session_start();
   $invoice = unserialize($_SESSION['invoice']);
 ?>
 <!DOCTYPE html>
@@ -156,9 +157,9 @@
     <table class="heading" style="width:100%;">
         <tr>
             <td style="width:80mm;">
-                <h1 class="heading"><?php echo $corporation->getName();  ?></h1>
+                <h1 class="heading"><?php echo $invoice->getCorporation()->getName();  ?></h1>
                 <h2 class="heading">
-                  <?php echo  $corporation->getAdress();  ?>
+                  <?php echo  $invoice->getCorporation()->getAdress();  ?>
                 </h2>
             </td>
             <td rowspan="2" valign="top" align="right" style="padding:3mm;">
@@ -172,8 +173,8 @@
         <tr>
             <td>
                 <b>Buyer</b> :<br />
-                <?php echo  $buyer->getAdress();  ?><br />
-                <?php echo  $buyer->getName();  ?>
+                <?php echo  $invoice->getBuyer()->getAdress();  ?><br />
+                <?php echo  $invoice->getBuyer()->getName();  ?>
                 <br />
                 City - Pincode , Country<br />
             </td>
@@ -192,12 +193,23 @@
             </table>
 
             <table>
-            <tr>
-                <td style="width:8%;">1</td>
-                <td style="text-align:left; padding-left:10px;">Software Development<br />Description : Upgradation of telecrm</td>
-                <td class="mono" style="width:15%;">1</td><td style="width:15%;" class="mono">157.00</td>
-                <td style="width:15%;" class="mono">157.00</td>
-            </tr>
+                <?php
+                  if($invoice->getContentInvoice() != null)
+                  {
+                    foreach ($invoice->getContentInvoice() as $key => $value) {
+                ?>
+                      <tr>
+                         <td style="width:8%;"><?php echo $value->getNumber(); ?></td>
+                         <td style="text-align:left; padding-left:10px;"><?php echo $value->getProduct(); ?></td>
+                         <td style="text-align:left; padding-left:10px;"><?php echo $value->get(); ?></td>
+                         <td class="mono" style="width:15%;"><?php echo $value->getRate(); ?></td>
+                         <td style="width:15%;" class="mono"><?php echo $value->getTotal(); ?></td>
+                      </tr>
+                <?php
+                    }
+                  }
+
+                 ?>
             <tr>
                 <td colspan="3"></td>
                 <td></td>

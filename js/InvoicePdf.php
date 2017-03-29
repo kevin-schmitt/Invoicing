@@ -172,8 +172,8 @@
         <tr>
             <td>
                 <b>Buyer</b> :<br />
-                <?php echo  $buyer->getAdress();  ?><br />
-                <?php echo  $buyer->getName();  ?>
+                <?php echo  $invoice->getBuyer()->getAdress();  ?><br />
+                <?php echo  $invoice->getBuyer()->getName();  ?>
                 <br />
                 City - Pincode , Country<br />
             </td>

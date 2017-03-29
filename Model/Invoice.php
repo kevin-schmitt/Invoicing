@@ -5,7 +5,7 @@
 		private $_number = null;
 		private $_date = null;
 		private $_buyer = null;
-		private $_contentInvoice = array();
+		private $_contentInvoice;
 		private $_corporation = null;
 		private $_total = null;
 
@@ -64,14 +64,14 @@
 		 */
 		public function addContentInvoice($obj, $key = null) {
 	    if ($key == null) {
-	        $this->items[] = $obj;
+	        $this->_contentInvoice[] = $obj;
 	    }
 	    else {
-	        if (isset($this->items[$key])) {
+	        if (isset($this->_contentInvoice[$key])) {
 	            throw new KeyHasUseException("Key $key already in use.");
 	        }
 	        else {
-	            $this->items[$key] = $obj;
+	            $this->_contentInvoice[$key] = $obj;
 	        }
 	    }
 		}
@@ -85,8 +85,8 @@
 		 * @return void
 		 */
 		public function deleteContentInvoice($key) {
-	    if (isset($this->items[$key])) {
-	        unset($this->items[$key]);
+	    if (isset($this->_contentInvoice[$key])) {
+	        unset($this->_contentInvoice[$key]);
 	    }
 	    else {
 	        throw new KeyInvalidException("Invalid key $key.");
@@ -101,13 +101,8 @@
 		 * @param  key
 		 * @return void
 		 */
-		public function getContentInvoice($key) {
-		 if (isset($this->items[$key])) {
-		 	return $this->items[$key];
-		 }
-		 else {
-		   throw new KeyInvalidException("Invalid key $key.");
-		 }
+		public function getContentInvoice() {
+			return $this->_contentInvoice;
 		}
 
 	}

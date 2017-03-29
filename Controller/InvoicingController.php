@@ -11,7 +11,10 @@
 
 		// check data send
 		$corporationName = filter_input(INPUT_POST, 'coporationName', FILTER_SANITIZE_STRING);
+		$corporationName = $corporationName ? $corporationName : '';
 		$corporationAdress = filter_input(INPUT_POST, 'corporationAdress', FILTER_SANITIZE_STRING);
+		$corporationAdress = $corporationAdress ? $corporationAdress : '';
+		
 		$buyerName = filter_input(INPUT_POST, 'buyerName', FILTER_SANITIZE_STRING);
 		$buyerAdress = filter_input(INPUT_POST, 'buyerAdress', FILTER_SANITIZE_STRING);
 		$nbInvoice = filter_input(INPUT_POST, 'nbInvoice', FILTER_SANITIZE_STRING);
@@ -32,20 +35,5 @@
 		header('Location: InvoicingContentController.php');
 		exit;
 
-		/*
-
-		ob_start();
-	    include('../view/InvoicePdf.php');
-	    $content = ob_get_clean();
-
-		$mpdf=new mPDF('c','A4','','' , 0 , 0 , 0 , 0 , 0 , 0);
-
-		$mpdf->SetDisplayMode('fullpage');
-
-		$mpdf->list_indent_first_level = 0;  // 1 or 0 - whether to indent the first level of a list
-
-		$mpdf->WriteHTML($content);
-
-		$mpdf->Output();*/
 
 	}
