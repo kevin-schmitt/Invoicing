@@ -1,6 +1,7 @@
 <?php
   session_start();
   $invoice = unserialize($_SESSION['invoice']);
+  var_dump($invoice);
 ?>
 <!DOCTYPE html>
 <html>
@@ -201,7 +202,7 @@
                       <tr>
                          <td style="width:8%;"><?php echo $value->getNumber(); ?></td>
                          <td style="text-align:left; padding-left:10px;"><?php echo $value->getProduct(); ?></td>
-                         <td style="text-align:left; padding-left:10px;"><?php echo $value->get(); ?></td>
+                         <td style="text-align:left; padding-left:10px;"><?php echo $value->getQuantity(); ?></td>
                          <td class="mono" style="width:15%;"><?php echo $value->getRate(); ?></td>
                          <td style="width:15%;" class="mono"><?php echo $value->getTotal(); ?></td>
                       </tr>
