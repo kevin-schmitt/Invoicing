@@ -1,3 +1,4 @@
+
 .form
 {
 	position: relative;
@@ -20,6 +21,9 @@
 	padding: 15px;
 }
 
+input:focus, {
+    border:1px solid #97d6eb;
+}
 .section
 {
 	width: 100%;
@@ -33,12 +37,37 @@ label
 
 
 }
-.well {
-    background: #00BFFF;
-}
+.well
+{
+	background-color: #00CED1;//darkblue
 
+}
 .pdf
 {
 	margin-bottom: 1%;
 	height: 80px;
+}
+.navbar-nav {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.nav>li>a {
+        padding: 20px;
+}
+.navbar-nav>li>a {
+			 line-height: normal;
+	 }
+li
+{
+	border-right:  2px solid black;
+	border-left:  2px solid black;
+	background-color: #F08080;
+
+}
+ul
+{
+	width: 100%;
+	margin-left: 50%;
 }

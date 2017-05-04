@@ -1,3 +1,7 @@
+<?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -9,11 +13,9 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body lang="en">
-		<nav class="container-fluid row">
-  		<ul class="nav nav-pills nav-justified">
-		    <li class="active"><a href="#">Home</a></li>
-		  </ul>
-		</nav>
+		<?php
+			include_once('view/header.html');
+		?>
 		<section class="row">
 			<article class="col-12">
 				<?php
