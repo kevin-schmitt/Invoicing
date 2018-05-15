@@ -1,0 +1,113 @@
+a{
+	color: white;
+	text-decoration: none;
+}
+aside:focus{
+	background-color: light-blue;
+}
+.camera{
+	background-color: gray;
+	font-size: 10em !important;
+}
+.center{
+	 text-align:center;
+}
+/* for navigation header list*/
+.dropdown-header {
+	color: white;
+	background-color: #a8a1a1; /* gray */
+	text-transform: uppercase;
+    font-weight: 600;
+}
+.form
+{
+	position: relative;
+	z-index: 1;
+	background: #FFFFFF;
+	padding: 45px;
+	text-align: center;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+}
+
+.form input
+{
+	font-family: "Roboto", sans-serif;
+	outline: 0;
+	background: #f2f2f2;
+	width: 100%;
+	border: 0;
+	margin: 0 0 15px;
+	padding: 15px;
+}
+footer
+{
+	position: absolute;
+    bottom: 0;
+	width: 100% !important;
+	background-color: #4C4CFF;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+}
+.glyphicon{
+	color: white;
+	font-size: 2em;
+}
+h1
+{
+	color: white;
+	font-size: bold;
+}
+input:focus {
+    border:1px solid #97d6eb;
+}
+li{
+	border-bottom: 2px solid #a8a1a1;
+}
+.mid{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+el
+{
+	width: 40%;
+	font-size: 2em;
+	color:white;
+	font-family: "Arial Black", Arial, Verdana, sans-serif;
+
+
+}
+
+.navbar-nav {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+.navbar-default {
+    background-color: #4C4CFF;
+	color: #FFF !important;
+
+}
+.pdf
+{
+	margin-bottom: 1%;
+	height: 80px;
+}
+.section
+{
+	width: 100%;
+}
+.separator{
+	height: 100%;
+}
+.well
+{
+	background-color: #00CED1;/* darkblue */
+
+}
+[hidden] {
+  display: none !important;
+}
