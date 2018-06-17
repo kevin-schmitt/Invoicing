@@ -7,7 +7,7 @@
 	<input type="text" placeholder="buyer Adress" name="buyerAdress" id="buyerAdress">
 	<input type="number" placeholder="number of invoice" name="nbInvoice" id="nbInvoice">
 	<input type="date"  name="date" id="date">
-	<button type="submit" name="generateInvoice" class="form-control input-lg btn btn-success">
+	<button type="submit" name="generateInvoice" value="generateInvoice" class="form-control input-lg btn btn-success">
 		<span class="glyphicon glyphicon-send">Generate invoicing</span>
 	</button>
 </form>

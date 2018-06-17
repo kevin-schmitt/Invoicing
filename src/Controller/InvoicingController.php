@@ -37,6 +37,8 @@
 
 			session_start();
 			$_SESSION['invoice'] = serialize($invoice);
+			header('Location:  ../../public/invoice/formAddRow');
+			exit;
 	
 		} catch (Exception $e) {
 			session_destroy();

@@ -1,7 +1,6 @@
 <?php
   session_start();
   $invoice = unserialize($_SESSION['invoice']);
-  var_dump($invoice);
 ?>
 <!DOCTYPE html>
 <html>
